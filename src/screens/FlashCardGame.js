@@ -33,7 +33,7 @@ export default function FlashCard({}) {
         <KeyboardAvoidingView behavior = "padding" style={styles.container} >
             <View>
                 <Animated.View style={[{ transform: [{rotateY: interpolateFront}]}, styles.hidden]}>
-                    <FlipCard title='Front'/>
+                    <FlipCard title='Welke vogel is dit?'/>
                 </Animated.View>
 
                 <Animated.View style={[
@@ -41,7 +41,7 @@ export default function FlashCard({}) {
                     styles.hidden,
                     {transform:[{rotateY: interpolateBack}]}
                     ]}>
-                    <FlipCard title='Back'/>
+                    <FlipCard title='Antwoord:'/>
                 </Animated.View>
                 <Button onPress={handleFlip}>Antwoord</Button>
             </View>

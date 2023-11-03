@@ -34,16 +34,16 @@ const FlipCard: React.FC <Props> = ( {title}, {plaatje} ) => {
 const styles = StyleSheet.create({
     card: {
         width: 300,
-        height: 450,
+        height: 470,
         backgroundColor : 'white', 
-        justifyContent : 'center', 
+        // justifyContent : 'center', 
         padding: 0,
-        marginTop:'10vw',
+        marginBottom:10,
     },
     container : {
         width : '100%',
         height : 400,
-        marginBottom : 25,
+        // marginBottom : 25,
         borderRadius : 15,
         backgroundColor : '#FFFFFF',
         overflow : 'hidden'
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
     Image: {
         width: '100%',
         height: 400,
-        borderRadius : 5
+        borderRadius : 5,
+        marginTop:0
     },
     textContainer : {
         padding: 2,
@@ -63,7 +64,13 @@ const styles = StyleSheet.create({
     title: {
         fontWeight : 'bold',
         fontSize : 20,
+        justifyContent : 'center',
+        paddingTop:0,
+        marginBottom: 10,
+        marginTop:15,
+        marginBottom: 15
 
+        // height:'30%'
     }
 })
 
