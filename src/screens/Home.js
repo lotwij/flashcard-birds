@@ -5,12 +5,17 @@ export default function Home({ navigation }) {
     return (
         <View style={styles.container}>
           <Text style={styles.text}>Home Screen</Text>
+          <TouchableOpacity style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Details')}>
+            <Text style={styles.buttonText}>Ga naar extra scherm</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Details')}
-          >
-            <Text style={styles.buttonText}>Go to Detail Screen</Text>
+            onPress={() => navigation.navigate('Flipcard')}>
+            <Text style={styles.buttonText}>Start leren vogels</Text>
           </TouchableOpacity>
+
         </View>
       );
     }

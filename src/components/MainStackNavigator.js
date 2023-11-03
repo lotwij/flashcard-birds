@@ -1,6 +1,7 @@
 
 import Home from '../screens/Home'
 import Details from '../screens/ActieveSpellen'
+import FlashCard from '../screens/FlashCardGame';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native';
@@ -14,6 +15,7 @@ function MainStackNavigator() {
           <Stack.Navigator>
             <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }}/>
             <Stack.Screen name="Details" component={Details} />
+            <Stack.Screen name="Flipcard" component={FlashCard} />
           </Stack.Navigator>
         </NavigationContainer>
       );
