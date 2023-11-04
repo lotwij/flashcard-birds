@@ -36,14 +36,12 @@ const styles = StyleSheet.create({
         width: 300,
         height: 470,
         backgroundColor : 'white', 
-        // justifyContent : 'center', 
         padding: 0,
         marginBottom:10,
     },
     container : {
         width : '100%',
         height : 400,
-        // marginBottom : 25,
         borderRadius : 15,
         backgroundColor : '#FFFFFF',
         overflow : 'hidden'

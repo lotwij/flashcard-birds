@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react'
 import { StyleSheet, View, KeyboardAvoidingView, Animated} from 'react-native'
 import FlipCard from '../../components/FlipCard'
-import {Button} from 'react-native-paper'
+import Button from '../components/Button';
 
 
 export default function FlashCard({}) {
@@ -43,7 +43,8 @@ export default function FlashCard({}) {
                     ]}>
                     <FlipCard title='Antwoord:'/>
                 </Animated.View>
-                <Button onPress={handleFlip}>Antwoord</Button>
+                <Button onPress={handleFlip}
+                text='Antwoord'></Button>
             </View>
             
         </KeyboardAvoidingView>
@@ -61,6 +62,9 @@ const styles = StyleSheet.create({
     back: {
         position: 'absolute',
         top: 0,
+    },
+    button: {
+
     }
 });
 
