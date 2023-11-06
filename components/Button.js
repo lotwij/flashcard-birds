@@ -17,10 +17,16 @@ const Button = ({ name, size, color, iconColor, style, onPress}) => {
 
   return (
     <TouchableWithoutFeedback 
-        onPressIn={()=>animateScale(0.6)}
-        onPressOut={()=>{
-        animateScale(1)}}
-        delayPressIn={0}
+          // When the button is pressed down, animate the scale to 0.6
+          onPressIn={()=>animateScale(0.6)}  
+          // Delay before the onPressIn event is triggered
+          delayPressIn={0} 
+          // When the button is released, animate the scale back to 1
+          onPressOut={()=>{ 
+            animateScale(1),
+            // Call the onPress prop, which should be a function provided by the parent component
+            onPress() 
+          }}
         delayPressOut={100}
         >
         <Animated.View style={{

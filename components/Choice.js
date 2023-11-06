@@ -2,8 +2,8 @@ import { View, Text } from "react-native";
 import React from "react";
 
 const COLORS = {
-    goed: '#00eda6',
-    fout: '#ff006f'
+    goed: "#52BC91",
+    fout: "#F39675"
 }
 
 const Choice = ({ type })=>{

@@ -3,12 +3,12 @@ import React from 'react'
 import Button from './Button'
 
 const COLORS = {
-    goed: "#00eda6",
-    fout: "#ff006f",
-    antwoord: "#ffbf00"
+    goed: "#52BC91",
+    fout: "#F39675",
+    antwoord: "#F5F5F5"
 }
 
-const Footer = () => {
+const Footer  = ({ handleChoice }) => {
   return (
     <View style={{
         position: 'absolute',
@@ -24,11 +24,12 @@ const Footer = () => {
       size={24}
       color='white'
       iconColor={COLORS.fout}
+      onPress={() => handleChoice(-1)}
       />
       <Button
       name="lightbulb-o"
       size={24}
-      color='white'
+      color='black'
       iconColor={COLORS.antwoord}
       />
       <Button
@@ -36,6 +37,7 @@ const Footer = () => {
       size={24}
       color='white'
       iconColor={COLORS.goed}
+      onPress={() => handleChoice(1)}
       />
     </View>
   )

@@ -59,6 +59,16 @@ export default function Details() {
     }
   }, [birds.length])
 
+    // handle user choice (left or right swipe)
+    const handleChoice = useCallback((direction)=>{
+      Animated.timing(swipe.x, {
+        toValue: direction  * 500,
+        duration: 400,
+        useNativeDriver: true
+      }).start(removeTopCard);
+  
+    },[removeTopCard,swipe.x]);
+
 
   return (
     <View style={styles.container}>
@@ -80,7 +90,7 @@ export default function Details() {
           )
         }).reverse()
       }
-      <Footer/>
+      <Footer  handleChoice={handleChoice}/>
     </View>
   );
 }
